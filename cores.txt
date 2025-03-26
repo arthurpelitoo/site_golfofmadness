@@ -1,0 +1,8 @@
+cores principais:
+
+#be304f vermelho vinho.
+#991937 vermelho mais escuro.
+
+#f2e982 Amarelo pros textos talvez.
+ou
+#000000 Preto pros textos mesmo.

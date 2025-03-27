@@ -1,7 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 body{
     background-color: #991937;
 }
 
+/* realizar correcao posteriormente. */
 header{
     background-color: #be304f;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    nav ul{
+        float: left;
+        padding: 10px;
+        /* gap: 20px; */
+        list-style: none;
+
+        li{
+            display: inline;
+
+            a{
+                font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                text-decoration: none;
+                color: white;
+                border-radius: 25px;
+                background-color: #410110;
+                padding: 10px;
+                transition: all 0.3s;
+            }
+            a:hover{
+                background-color: white;
+                color: black;
+            }
+
+        }
+
+    }
+
+}
+
+.btn{
+    background-color: #f2e982;
+    color: #410110;
+    transition: all 0.3s;
+}
+
+.btn:hover{
+    background-color: #fce6f5;
+    color: #2e010b; 
+}
+
+
+section{
+    background-color: #be304f;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+
+    h2{
+        color:white;
+        font-family: 'Finger Paint', Arial, Helvetica, sans-serif;
+    }
+    p{
+        color: white;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    }
+}
+
+
+footer{
+    background-color: #be304f;
+    
+    p{
+        color: white;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    }
 }

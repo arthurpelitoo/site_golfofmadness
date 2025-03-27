@@ -1,8 +1,11 @@
-cores principais:
+Cores principais:
+Para elementos visuais:
 
 #be304f vermelho vinho.
 #991937 vermelho mais escuro.
+#410110 vermelho mais escuro ainda.
 
+Textos:
 #f2e982 Amarelo pros textos talvez.
 ou
 #000000 Preto pros textos mesmo.

@@ -128,6 +128,55 @@ header{
 
 /* FIM DO BANNER */
 
+
+.espacoHeader{
+    width: 85%;
+    display: flex;
+    margin: auto;
+    background-color: #be304f;
+    border-radius: 8px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    padding: 20px;
+    .container{
+        .grid{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            .col{
+                padding: 10px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* FIM DO Grid */
+.container{
+    h1{
+        text-align: center;
+        .faixaTitle{
+            font: 26px 'Finger Paint', Arial, Helvetica, sans-serif;
+            color: white;
+            background: #410110;
+            border-radius: 25px;
+            margin: 20px;
+            padding: 10px;
+            line-height: 40px;
+        }
+    }
+}
+
+/* FIM DO FAIXATITLE */
+
+main{
+    section{
+        padding: 50px 0;
+    }
+}
+
 .boxInform{
     display: flex;
     flex-direction: column;
@@ -142,11 +191,16 @@ header{
     .container{
         width: 90%;
         margin: auto;
-        .videoTrailer{
+        .videoTrailerHome{
             width: 100%;
             height: 240px;
             margin: auto;
             border-radius: 25px;
+        }
+        .videoTrailerSobre{
+            width: 100%;
+            height: 300px;
+            margin: 50px 0;
         }
         h2{
             color:white;
@@ -229,39 +283,10 @@ footer{
 
 /* FIM DO FOOTER */
 
-
-/* Personalização da Scrollbar para navegadores WebKit (Chrome, Edge, Safari) NAO FUNCIONA NO FIREFOX */
-
-::-webkit-scrollbar {
-    width: 10px; /* Largura da barra */
-}
-
-/* Fundo da barra de rolagem */
-::-webkit-scrollbar-track {
-    background: #2e010b; /* Cor de fundo */
-}
-
-/* Barra de rolagem */
-::-webkit-scrollbar-thumb {
-    background: #d83d5f; /* Cor da barra */
-    border-radius: 3px; /* Bordas arredondadas */
-}
-
-/* Quando o usuário passa o mouse */
-::-webkit-scrollbar-thumb:hover {
-    background: #f2e982; /* Cor ao passar o mouse */
-}
-
-/* muda a cor da barra no FIREFOX */
-scrollbar-color{
-    background: #d83d5f;
-}
-
-/* Fim da personalização da Scrollbar */
-
-
+/* Se o usuario tiver uma tela com mais de 1000px ou igual 1000px  */
 @media (min-width: 1000px){
 
+    /* Inicio do Header */
     header{
         .container{
             width: 1000px;
@@ -306,9 +331,21 @@ scrollbar-color{
             }
         }
     }
+    /* Final do Header */
+    /* Inicio da espacoHeader */
+    .espacoHeader{
+        margin-bottom: 200px;
+        .container{
+            .grid{
+                display: grid;
+                grid-template-columns: repeat(3, 33%);
+            }
+        }
+    }
+    /* Final da espacoHeader */
+    /* Inicio da boxInform */
     .boxInform{
         justify-content: center;
-        background-color: #be304f;
         border-radius: 8px;
         margin-top: 75px;
         margin-bottom: 90px;
@@ -316,15 +353,8 @@ scrollbar-color{
         width: 70%;
         display: flex;
         flex-direction: column;
-        margin: auto;
         padding: 20px;
         background-color: #be304f;
-        border-radius: 8px;
-        margin-top: 75px;
-        margin-bottom: 90px;
-
-
-
 
         .container{
             margin: auto;
@@ -376,8 +406,9 @@ scrollbar-color{
             
         }
     }
+    /* Final da boxInform */
+    /* Inicio do Footer */
     footer{
-        /* height: fit-content; */
         .container{
             p{
                 img{
@@ -386,30 +417,64 @@ scrollbar-color{
             }
         }
     }
+    /* Final do Footer */
     
 }
 
+/* Personalização da Scrollbar para navegadores WebKit (Chrome, Edge, Safari) NAO FUNCIONA NO FIREFOX */
+
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra */
+}
+
+/* Fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: #2e010b; /* Cor de fundo */
+}
+
+/* Barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background: #d83d5f; /* Cor da barra */
+    border-radius: 3px; /* Bordas arredondadas */
+}
+
+/* Quando o usuário passa o mouse */
+::-webkit-scrollbar-thumb:hover {
+    background: #f2e982; /* Cor ao passar o mouse */
+}
+
+/* muda a cor da barra no FIREFOX */
+scrollbar-color{
+    background: #d83d5f;
+}
+
+/* Fim da personalização da Scrollbar */
+
+
+/* Configuração apenas para a home page */
+
+/* Se o usuario possuir no maximo entre uma tela de 1000px e 850px, aplica essa responsividade */
 @media (max-width: 1000px){
     .banner{
         background-size: cover;
         height: 55%;
     }
 }
-
+/* Se o usuario possuir no maximo entre uma tela de 850px e 600px, aplica essa responsividade */
 @media (max-width: 850px){
     .banner{
         background-size: cover;
         height: 45%;
     }
 }
-
+/* Se o usuario possuir no maximo entre uma tela de 600px e 450px, aplica essa responsividade */
 @media (max-width: 600px){
     .banner{
         background-size: cover;
         height: 35%;
     }
 }
-
+/* Se o usuario possuir no maximo entre uma tela de 450px ou menos, aplica essa responsividade */
 @media (max-width: 450px){
     .banner{
         background-size: contain;

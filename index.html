@@ -4,65 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Golf Of Madness</title>
-    <link href="style/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css" >
 </head>
 <body>
     <header>
-        <a href="index.html" title="Home">
-            <!-- Aqui é o logo -->
-            <img src="https://placehold.co/100x25" alt="">
-        </a>
-
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html" title="Home">Home</a>
-                </li>
-                <li>
-                    <a href="sobre.html" title="Sobre">Sobre</a>
-                </li>
-                <li>
-                    <a href="galeriafotos.html" title="GaleriaFotos">Galeria de Fotos</a>
-                </li>
-                <li>
-                    <a href="contato.html" title="Contato">Contato</a>
-                </li>
-                <li>
-                    <a href="jogar.html" title="Jogar" class="btn">Jogar</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="flex">
+                <div class="flex-col1">
+                    <a href="#" class="header-logo" title="Home">
+                        <!-- Aqui é o logo -->
+                        <img src="/assets/imagens/logo.png" class="image-logo" alt="">
+                    </a>
+                </div>
+                <div class="flex-col2">
+                    <a href="#" onclick="toggleMenu()" class="header-menu">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                    <nav class="header-nav">
+                        <ul>
+                            <li>
+                                <a href="index.html" title="Home">Home</a>
+                            </li>
+                            <li>
+                                <a href="sobre.html" title="Sobre">Sobre</a>
+                            </li>
+                            <li>
+                                <a href="galeriafotos.html" title="GaleriaFotos">Galeria de Fotos</a>
+                            </li>
+                            <li>
+                                <a href="contato.html" title="Contato">Contato</a>
+                            </li>
+                            <li>
+                                <a href="jogar.html" title="Jogar" class="btn">Jogar</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
     </header>
-
+    <section class="banner">
+    </section>
     <main>
-        <section>
-            <!-- parte onde vai ter uma imagem de fundo e um video na frente -->
-            <iframe class="image" width="100%" height="480" src="https://www.youtube.com/embed/m_yvZdOgAO8" title="Chaves   Com Quantos Ovos Se Faz Um Bolo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <section class="boxInform">
+            <div class="container">
+                <h2>Veja o Trailer:</h2>
+                <!-- parte onde vai ter uma imagem de fundo e um video na frente -->
+                <iframe class="videoTrailer" width="100%" height="480" src="https://www.youtube.com/embed/m_yvZdOgAO8" title="Chaves   Com Quantos Ovos Se Faz Um Bolo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </section>
 
         <!-- sobre o jogo -->
-        <section>
-            <h2>
-                Sobre o Golf Of Madness:
-            </h2>
-            <!-- imagem de qualquer coisa relacionada ao game. -->
-             <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem vitae dolore nostrum consequuntur! Quis rerum veniam ratione incidunt atque iure consequuntur sunt in expedita fuga culpa excepturi veritatis, quasi sequi!
-             </p>
-             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, soluta reprehenderit? Eum corporis est necessitatibus officia velit provident deserunt perferendis, culpa inventore cumque libero doloremque incidunt dignissimos id magnam placeat.
-             </p>
+        <section class="boxInform">
+            <div class="container">
+                <h2>
+                    Sobre o Golf Of Madness:
+                </h2>
+                <!-- imagem de qualquer coisa relacionada ao game. -->
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem vitae dolore nostrum consequuntur! Quis rerum veniam ratione incidunt atque iure consequuntur sunt in expedita fuga culpa excepturi veritatis, quasi sequi!
+                </p>
+                <a href="">Saiba Mais</a>
+            </div>
+        </section>
+        <section class="boxInform">
+            <div class="container">
+                <h2>A Historia do Game</h2>
+                <div class="flexInform">
+                    <img src="./assets/imagens/gameImg1.webp">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo expedita ipsa labore nisi? Omnis reprehenderit modi nemo. In, ut odio! Rerum debitis voluptas voluptatem dolor maiores dolore molestias quia sed.</p>
+                </div>
+            </div>
         </section>
 
     </main>
-
     <footer>
-        <p>
-            <!-- adicionar logo do jogo aqui -->
-        </p>
-        <p>
-            Projeto criado por Arthur Antonio
-        </p>
+        <div class="container center">
+            <p>
+                <img src="/assets/imagens/logo.png" alt="Golf Of Madness">
+            </p>
+            <p class="iconRedes">
+                <a href="https://github.com/arthurpelitoo" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/arthurantoniodearaujo/" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/plebedaqueleinsta/" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </p>
+            <p>
+                Projeto criado por Arthur Antonio
+            </p>
+        </div>
     </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>

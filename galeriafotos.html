@@ -44,7 +44,6 @@
             </div>
         </div>
     </header>
-
     <main>
         <section class="espacoHeader">
             <div class="container">
@@ -56,19 +55,19 @@
                 </h1>
                 <div class="grid">
                     <div class="col">
-                        <img src="/assets/imagens/galeriaDeFotos/fase1.png" class="galleryImage">
+                        <img src="/assets/imagens/galeriaDeFotos/fase1.png" class="galleryImage" onclick="openFullScreen(this)">
                     </div>
                     <div class="col">
-                        <img src="/assets/imagens/galeriaDeFotos/fase3.png" class="galleryImage">
+                        <img src="/assets/imagens/galeriaDeFotos/fase3.png" class="galleryImage" onclick="openFullScreen(this)">
                     </div>
                     <div class="col">
-                        <img src="/assets/imagens/galeriaDeFotos/menuPrincipal.png" class="galleryImage">
+                        <img src="/assets/imagens/galeriaDeFotos/menuPrincipal.png" class="galleryImage" onclick="openFullScreen(this)">
                     </div>
                     <div class="col">
-                        <img src="/assets/imagens/galeriaDeFotos/parteEngracada.png" class="galleryImage">
+                        <img src="/assets/imagens/galeriaDeFotos/parteEngracada.png" class="galleryImage" onclick="openFullScreen(this)">
                     </div>
                     <div class="col">
-                        <img src="/assets/imagens/galeriaDeFotos/tabelaDeResultados.png" class="galleryImage">
+                        <img src="/assets/imagens/galeriaDeFotos/tabelaDeResultados.png" class="galleryImage" onclick="openFullScreen(this)">
                     </div>
                 </div>
             </div>
@@ -96,6 +95,11 @@
             </p>
         </div>
     </footer>
+    
+    <div id="fullscreen-container" onclick="closeFullScreen()">
+        <img id="fullscreen-img">
+    </div>
     <script src="js/index.js"></script>
+    <script src="js/galeriafotos.js"></script>
 </body>
 </html>

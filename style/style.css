@@ -10,6 +10,7 @@ html, body{
     background-color: #991937;
 }
 
+
 /* FIM DO BODY */
 
 *{
@@ -19,6 +20,7 @@ html, body{
 
 header{
     position: fixed;
+    z-index: 10;
     background-color: #be304f;
     width: 100%;
 
@@ -145,19 +147,43 @@ header{
             padding: 10px;
             .col{
                 padding: 10px;
-                img{
+                .galleryImage{
+                    border-radius: 10px;
                     width: 100%;
+                    transition: all 0.5s;
+                }
+                .galleryImage:hover {
+                    transform: scale(1.1);
                 }
             }
         }
     }
 }
 
-/* FIM DO Grid */
+#fullscreen-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+#fullscreen-container img{
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* FIM DO espacoHeader (usado nas paginas de galeria, contato e jogar) */
+
 .container{
     margin: auto;
     h1{
         text-align: center;
+        padding: 20px;
         .faixaTitle{
             font: 26px 'Finger Paint', Arial, Helvetica, sans-serif;
             color: white;
@@ -176,7 +202,63 @@ header{
         margin-top: 20px;
         padding: 20px;
         background-color: #991937;
+        .labelForm{
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            color: white;
+            padding: 5px;
+        }
+        .textBox{
+            border: 5px solid #be304f;
+            border-radius: 10px;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            color: #ffff;
+            background-color: #2e010b;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .textBox:hover{
+            border: 5px solid #f2e982;
+        }
+        .textAreaBox{
+            min-width: 400px;
+            max-width: 500px;
+            min-height: 100px;
+            max-height: 200px;
+
+            border: 5px solid #be304f;
+            border-radius: 10px;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            color: #ffff;
+            background-color: #2e010b;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .textAreaBox:hover{
+            border: 5px solid #f2e982;
+        }
+        .btn{
+            margin: auto;
+            width: 90%;
+            border: 0;
+            border-radius: 10px;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            background-color: #f2e982;
+            color: #410110;
+            transition: all 0.3s;
+        }
         
+        .btn:hover{
+            transform: scale(1.1);
+            background-color: #fce6f5;
+            color: #2e010b; 
+        }
+    }
+    /* esse é o iframe do jogo (pagina jogar) */
+    iframe{
+        margin: 50px 0;
+        width: 85vw;
+        height: 300px;
     }
 }
 
@@ -350,6 +432,33 @@ footer{
             .grid{
                 display: grid;
                 grid-template-columns: repeat(3, 33%);
+            }
+            /* esse é o iframe do jogo (pagina jogar) */
+            iframe{
+                width: 50vw;
+                height: 50vh;
+                border: 0;
+            }
+            a{
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                justify-content: center;
+                justify-self: center;
+                width: 25vw;
+                font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                text-decoration: none;
+                color: white;
+                padding: 10px;
+                margin: 20px;
+                border-radius: 25px;
+                background-color: #410110;
+                transition: all 0.3s;
+            }
+            a:hover{
+                transform: scale(1.1);
+                background-color: white;
+                color: black;
             }
         }
     }

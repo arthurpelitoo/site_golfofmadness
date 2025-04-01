@@ -155,6 +155,7 @@ header{
 
 /* FIM DO Grid */
 .container{
+    margin: auto;
     h1{
         text-align: center;
         .faixaTitle{
@@ -166,6 +167,16 @@ header{
             padding: 10px;
             line-height: 40px;
         }
+    }
+
+    .formBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #991937;
+        
     }
 }
 

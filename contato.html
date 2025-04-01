@@ -46,7 +46,31 @@
     </header>
 
     <main>
-
+        <section class="espacoHeader">
+            <div class="container">
+                <h1>
+                    <span class="faixaTitle">
+                        <i class="fa-solid fa-envelope"></i>
+                        Entre em Contato
+                    </span>
+                </h1>
+                <form name="formContato" class="formBox" method="post">
+                    <label for="nome" class="labelForm">Digite seu nome:</label>
+                    <input type="text" name="nome" id="nome" class="textBox" required>
+                    <br>
+                    <label for="email" class="labelForm" >Digite seu E-Mail:</label>
+                    <input type="text" name="email" id="email" class="textBox" required>
+                    <br>
+                    <label for="mensagem" class="labelForm">Mensagem</label>
+                    <textarea name="mensagem" id="mensagem" rows="10" required></textarea>
+                    <br>
+                    <button type="submit">
+                        <i class="fas fa-check"></i>
+                         Enviar Mensagem 
+                    </button>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer>

@@ -172,6 +172,7 @@ header{
     justify-content: center;
 }
 
+
 #fullscreen-container img{
     max-width: 90%;
     max-height: 90%;
@@ -259,6 +260,27 @@ header{
         margin: 50px 0;
         width: 85vw;
         height: 300px;
+    }
+    .jogarBtn{
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+        width: 25vw;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        margin: 20px;
+        border-radius: 25px;
+        background-color: #410110;
+        transition: all 0.3s;
+    }
+    .jogarBtn:hover{
+        transform: scale(1.1);
+        background-color: white;
+        color: black;
     }
 }
 
@@ -439,7 +461,7 @@ footer{
                 height: 50vh;
                 border: 0;
             }
-            a{
+            .jogarBtn{
                 display: flex;
                 gap: 5px;
                 align-items: center;
@@ -455,7 +477,7 @@ footer{
                 background-color: #410110;
                 transition: all 0.3s;
             }
-            a:hover{
+            .jogarBtn:hover{
                 transform: scale(1.1);
                 background-color: white;
                 color: black;

@@ -55,11 +55,12 @@
                         Entre em Contato
                     </span>
                 </h1>
-                <form name="formContato" class="formBox" method="post">
+                <form action="https://formsubmit.co/golfofmadnesscontact@gmail.com" name="formContato" class="formBox" method="post">
                     <label for="nome" class="labelForm">Digite seu nome:</label>
                     <input type="text" name="nome" id="nome" class="textBox" required>
                     <br>
                     <label for="email" class="labelForm" >Digite seu E-Mail:</label>
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5501/contato.html">
                     <input type="text" name="email" id="email" class="textBox" required>
                     <br>
                     <label for="mensagem" class="labelForm">Mensagem</label>

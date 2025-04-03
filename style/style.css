@@ -339,6 +339,7 @@ main{
             text-decoration: none;
             color: white;
             padding: 10px;
+            margin: 40px;
             border-radius: 25px;
             background-color: #410110;
             transition: all 0.3s;

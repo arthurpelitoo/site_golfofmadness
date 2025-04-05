@@ -1375,16 +1375,15 @@ self.C3_ExpressionFuncs = [
 		},
 		p => {
 			const n0 = p._GetNode(0);
-			return () => n0.ExpObject(3);
+			return () => n0.ExpObject(2);
 		},
 		p => {
 			const n0 = p._GetNode(0);
-			return () => n0.ExpObject(4);
+			return () => n0.ExpObject(3);
 		},
-		() => 5,
+		() => 4,
 		() => 2,
 		() => 3,
-		() => 4,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => v0.GetValue();
@@ -1432,6 +1431,7 @@ self.C3_ExpressionFuncs = [
 			return () => (C3.toDegrees(C3.angleTo(n0.ExpObject(), n1.ExpObject(), f2(), f3())) + 180);
 		},
 		() => "badshot",
+		() => 5,
 		() => "gatofeliz",
 		() => "miraleve",
 		() => 40,

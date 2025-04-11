@@ -1,48 +1,46 @@
-
-document.getElementById('button').onclick = function(){
-    var nome = document.getElementById('nome').value;
-
-    var email = document.getElementById('email').value;
-
-    var mensagem = document.getElementById('mensagem').value;
-
-    if(nome == "" && email == "" && mensagem == ""){
-        alert("Por favor, preencha todos os campos.");
-    } else{
-
-        if(nome == ""){
-            alert("Informe o nome");
-        }
-
-        if(email == ""){
-            alert("Informe o email");
-        }
-
-        if(mensagem == ""){
-            alert("Dê alguma mensagem");
-        }
-    }
-
-    function validarEmail(email) {
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return regex.test(email);
-    }
-
-    console.log(validarEmail("bosta@emailcom"));
-
-    // if(validarEmail)
-
-    if(nome != "" && email != "" && mensagem != ""){
-        alert("Formulário enviado com sucesso!");
-    }
+function validarEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email); // verifica se é true ou false. Se for true ele entrega o true e contrario tambem.
 }
 
+const form = document.getElementById("formId");
+const button = document.getElementById("button");
 
-// function validarEmail(email) {
-//     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//     console.log(regex);
-//     return regex.test(email);
-// }
+form.addEventListener("submit", function(event){
+    const nome = form.nome.value.trim(); //o value.trim() apaga os espaços vazios antes e depois da linha.
+    const email = form.email.value.trim();
+    const mensagem = form.mensagem.value.trim();
 
-// console.log(validarEmail("teste@exemplo.com")); // true
-// console.log(validarEmail("errado@com"));        // false
+    if(nome == "" && email == "" && mensagem == ""){ //se o nome, email e mensagem não estiverem preenchidos, não permitir evento de ocorrer e retorne pro estado original do formulario. 
+        alert("Por favor, preencha todos os campos.");
+        event.preventDefault();
+        return;
+    } else if(nome != "" && email != "" && mensagem != "" && validarEmail(email)){ //ou então, se nome, email, mensagem e a verificação do email estiverem corretamente preenchidos, enviar formulario.
+        alert("Formulário enviado com sucesso!");
+    } else{ // ou 
+
+        if(nome == ""){ //se apenas o nome não estiver preenchido
+            alert("Informe o nome");
+            event.preventDefault();
+            return;
+        }
+
+        if(email == ""){ //se apenas o email não estiver preenchido
+            alert("Informe o email");
+            event.preventDefault();
+            return;
+
+        } else if(!validarEmail(email)){ //ou então, se email estiver preenchido, mas com email invalido
+            alert("O email informado não é válido. Por favor, insira um email no formato correto.");
+            event.preventDefault();
+            return;
+        }
+
+        if(mensagem == ""){  //se apenas a mensagem não estiver preenchida
+            alert("Dê alguma mensagem");
+            event.preventDefault();
+            return;
+        }
+    }
+});
+

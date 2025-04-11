@@ -1473,21 +1473,10 @@ self.C3_ExpressionFuncs = [
 			return () => (v0.GetValue()).toString();
 		},
 		() => 7500,
-		() => "Ranque: Miaumal",
 		() => "HUD e Resultados",
 		() => 15000,
-		() => "Ranque: MiaUau",
-		() => "Ranque: Miaucrível!",
 		() => "Esfera",
 		() => 0.5,
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => and("Tacadas feitas: ", v0.GetValue());
-		},
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => and("Pontos adquiridos: ", v0.GetValue());
-		},
 		() => 10,
 		() => "le-fishe-au-chocolat-with-intro",
 		() => "fishSound",

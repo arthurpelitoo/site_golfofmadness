@@ -6,7 +6,7 @@ html, body{
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: auto;
     background-color: #991937;
 }
 
@@ -119,7 +119,7 @@ header{
 }
 
 /* FIM DO HEADER */
-
+/* Inicio do BANNER(vale apenas para a pagina principal) */
 .banner{
     background: url(../assets/imagens/mainMenu2.png) no-repeat top center;
     background-size: cover;
@@ -129,7 +129,7 @@ header{
 }
 
 /* FIM DO BANNER */
-
+/* Inicio do espacoHeader(vale para as paginas de galeria, contato e a de jogar.) */
 
 .espacoHeader{
     width: 85%;
@@ -148,11 +148,14 @@ header{
             .col{
                 padding: 10px;
                 .galleryImage{
+                    /* aqui muda o comportamento das imagens da galeria de fotos. */
+                    z-index: 0; /* coloca a camada da imagem igualmente a todas */
                     border-radius: 10px;
                     width: 100%;
                     transition: all 0.5s;
                 }
                 .galleryImage:hover {
+                    z-index: 1; /* deixa a camada da imagem crescida maior que a das outras. */ 
                     transform: scale(1.1);
                 }
             }
@@ -160,6 +163,9 @@ header{
     }
 }
 
+/* ao entrar na pagina da galeria de fotos fica desabilitado de inicio, apenas habilita essa
+    configuração quando clica em alguma imagem. Se a pessoa clicar fora da imagem, desabilita
+    novamente.*/
 #fullscreen-container {
     display: none;
     z-index: 11;
@@ -174,30 +180,36 @@ header{
 }
 
 
+
+
 #fullscreen-container img{
     max-width: 90%;
     max-height: 90%;
 }
 
 /* FIM DO espacoHeader (usado nas paginas de galeria, contato e jogar) */
-
+/* Inicio do Container(usado em todas as paginas, mas nas de contato, jogar e galeria tem
+    maior importancia, tanto pelos titulos, formulario e janela de jogo estilizados.) */
 .container{
     margin: auto;
     h1{
+        /* aqui influencia nos titulos */
         text-align: center;
         padding: 20px;
         .faixaTitle{
-            font: 26px 'Jolly Lodger', Arial, Helvetica, sans-serif;
+            /* influencia nas paginas que tem titulos que usam icones. */
+            font: 32px 'Jolly Lodger', Arial, Helvetica, sans-serif;
             color: white;
             background: #410110;
-            border-radius: 25px;
-            margin: 20px;
+            border-radius: 50px;
+            text-align: justify;
             padding: 10px;
             line-height: 40px;
         }
     }
 
     .formBox{
+        /* influencia apenas na pagina de contato com o formulario. */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -223,10 +235,10 @@ header{
             border: 5px solid #f2e982;
         }
         .textAreaBox{
-            min-width: 400px;
-            max-width: 500px;
-            min-height: 100px;
-            max-height: 200px;
+            resize: none;
+            min-width: 100%;
+            box-sizing: border-box;
+            font-size: 1rem;
 
             border: 5px solid #be304f;
             border-radius: 10px;
@@ -256,7 +268,7 @@ header{
             color: #2e010b; 
         }
     }
-    /* esse é o iframe do jogo (pagina jogar) */
+    /* esse é o iframe do jogo (pagina de jogar) */
     iframe{
         margin: 50px 0;
         width: 85vw;
@@ -285,15 +297,19 @@ header{
     }
 }
 
-/* FIM DO FAIXATITLE */
+/* FIM DO container */
+/* Inicio da Estilização que vale mais para a pagina principal e a de sobre. */
 
 main{
+    /* esse aqui vale para todas as paginas, queria que o section tivesse 50px de padding
+    obrigatorios. */
     section{
         padding: 50px 0;
     }
 }
 
 .boxInform{
+    /* basicamente as caixas contendo informações da pagina principal. */
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -305,22 +321,27 @@ main{
     margin-bottom: 90px;
 
     .container{
+        /* container aqui tem importancia diferente,
+            altera os textos de dentro dele em todas as paginas
+            mas foi pensado focando mais na pagina principal. */
         width: 90%;
         margin: auto;
         .videoTrailerHome{
+            /* iframe da pagina principal */
             width: 100%;
-            height: 240px;
+            height: 400px;
             margin: auto;
             border-radius: 25px;
         }
         .videoTrailerSobre{
+            /* iframe da pagina sobre */
             width: 100%;
             height: 300px;
             margin: 50px 0;
         }
         h2{
             color:white;
-            font-family: 'Jolly Lodger', Arial, Helvetica, sans-serif;
+            font: 36px 'Jolly Lodger', Arial, Helvetica, sans-serif;
             text-align: center;
             padding: 20px;
         }
@@ -350,6 +371,7 @@ main{
             color: black;
         }
         .flexInform{
+            /* a ultima caixa de informação da pagina principal */
             display: flex;
             flex-direction: column;
 
@@ -357,12 +379,20 @@ main{
                 width: 50%;
                 margin: auto;
             }
+            .fotoSobreCriador{
+                background-color: #e5dd8c;
+                border-radius: 25px;
+                width: 150px;
+                height: 150px;
+                padding: 10px;
+                box-shadow: 5px 10px #410110;
+            }
         }
 
     }
 }
 
-/* FIM DO SECTION */
+/* FIM das estilizações principais. */
 
 
 footer{
@@ -402,6 +432,9 @@ footer{
 
 /* Se o usuario tiver uma tela com mais de 1000px ou igual 1000px  */
 @media (min-width: 1000px){
+    html, body{
+        overflow-x: hidden; 
+    }
 
     /* Inicio do Header */
     header{
@@ -487,6 +520,14 @@ footer{
         }
     }
     /* Final da espacoHeader */
+    /* Inicio do container */
+    .formBox{
+        /* influencia apenas na pagina de contato com o formulario. */
+        .textAreaBox{
+            width: 600px;
+        }
+    }
+    /* fim do container */
     /* Inicio da boxInform */
     .boxInform{
         justify-content: center;
@@ -502,15 +543,15 @@ footer{
 
         .container{
             margin: auto;
-            .videoTrailer{
+            .videoTrailerHome{
                 width: 100%;
-                height: 400px;
+                height: 480px;
                 margin: auto;
                 border-radius: 25px;
             }
             h2{
                 color:white;
-                font-family: 'Jolly Lodger', Arial, Helvetica, sans-serif;
+                font: 38px 'Jolly Lodger', Arial, Helvetica, sans-serif;
                 text-align: center;
                 padding: 20px;
             }
@@ -545,6 +586,15 @@ footer{
                 img{
                     width: 50%;
                     margin: auto;
+                }
+                .criadorText{
+                    margin-left: 25px;
+                    text-align: left;
+                }
+                .fotoSobreCriador{
+                    border-radius: 1000px;
+                    width: 300px;
+                    height: 300px;
                 }
             }
             
